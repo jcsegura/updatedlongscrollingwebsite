@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="HTML5 template">
+<title>Juan's Long Scrolling Website</title>
+<script src="jquery/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/mainparallax.css">
+<link rel="stylesheet" type="text/css" href="css/pro2.css">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+<link rel="icon" href="images/js.gif" type="image/gif" sizes="30x30">
+<script>
+/*jquery plugin-scroll to the top*/
+$(function(){
+  $.scrollUp();
+});
+</script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+  <body>
+      <div id="wrapper">
+<!-- <h1 id="counter" class="counter_box">Counter</h1> -->
+  <h2 id="title" class="floating"> in·ven·tor </h2>
+  <h3 id="title1" class="floating"> /inˈven(t)ər/ <br> noun<br>
+
+a person who invented a particular process or device or who invents things as an occupation.<br> Synonyms <br> originator, author, creator, artist, founder, pioneer, builder, designer, experimenter, maker, innovator. </h3>
+  <div id="jonathan" class="shaking"> </div>
+<!-- boxes that appear on when you scroll up and down on the website-->
+<h1 id="one" class="box .fadeIn"> <br> · inspire · grow · create · recognize · think · read · make ·<br> · connect · motivate · meditate · communicate · innovate ·<br> · adventure · experiment · process · reject comfort zones ·<br> · stay grounded · re-invent your own narrative ·  </h1>
+
+<h1 id="two" class="box1 .fadeIn"> "In order for foregiveness to happen, something has to die." - Brene Brown</h1>
+
+<h1 id="three" class="box2 .fadeIn"> “The artist is a receptacle for emotions that come from all over the place: from the sky, from the earth, from a scrap of paper, from a passing shape, from a spider’s web.” <br> - Pablo Picasso  </h1>
+
+<h1 id="four" class="box3 .fadeIn"> "You ain't alone, so why you lonely? there you go on the dark end of the street. Are you scared to tell somebody how you feel about somebody? Are you scared what somebody's gon' think?
+or are you scared of me?" - Alabama Shakes </h1>
+
+<h1 id="five" class="box4 .fadeIn"> “People think a soul mate is your perfect fit. But a true soul mate is a mirror, the person who shows you everything that is holding you back, the person who brings you to your own attention so you can change your life." <br> - Elizabeth Gilbert </h1>
+<h1 id="six" class="box5 .fadeIn"> · trav·el · / ˈ travəl / · <br> mental note: explore as much as possible... traveling is an opportunity to re-invent yourself, to give yourself the time necessary, to look for yourself in other things and in other spaces. Be a nomad, a mad man.  </h1>
+<h1 id="seven" class="box6 .fadeIn"> Did you <br>finally get the chance<br> to dance along<br> the light of day?</h1>
+<h1 id="eight" class="box7 .fadeIn"> coffee breaks are to digest the things, i smelled, touched, saw, felt, and heard... reminds me, there is room to grow...  </h1>
+<h1 id="nine" class="box8 .fadeIn"> / · nature · \ <br> will ground you... <br> breathe in fresh air, breathe out the stale air... do what makes you happy, and stay curious, awake and aware.  </h1>
+<h1 id="ten" class="box9 .fadeIn"> and finally... Sleep, Sleep, SLeeeEEP!! <br> ZZZzz... then you can play, eat, drink, read, <br>& repeat!! </h1>
+<h1 id="eleven" class="box10 .fadeIn"> about... </h1>
+
+
+
+<!-- end of boxes -->
+</div>
+
+
+
+<!-- javascript -->
+<script type="text/javascript">
+$(window).scroll(function() {
+/*vertical Counter*/
+$("#counter").text("px:" +$(window).scrollTop());
+/*triggers the boxes to appear from hidden to visible*/
+$(window).scroll(function() {
+$('#one,#two,#three,#four,#five,#six,#seven,#eight,#nine,#ten,#eleven,#twelve,#thirteen,#fourteen').each(function(){
+  var imagePos = $(this).offset().top;
+  var topOfWindow = $(window).scrollTop();
+    if (imagePos < topOfWindow+700) {
+      $(this).addClass("fadeIn");
+    }
+  });
+});
+/*jquery plugin for scroll to top*/
+$(window).scroll(function(){
+  $("#title,#title1").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
+});
+</script>
+</body>
+</html>
